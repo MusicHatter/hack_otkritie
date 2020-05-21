@@ -1,0 +1,138 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вход</title>
+    <link rel="stylesheet" href="${contextPath}/resources/css/normalize.css">
+    <link rel="stylesheet" href="${contextPath}/resources/css/style.css">
+</head>
+<body class="login-page">
+<main class="login-content">
+    <div class="container">
+        <div class="login-column">
+            <a href="/index" class="header-logo">
+                <img src="${contextPath}/resources/img/logo_blue.svg" alt="Open Tracker">
+            </a>
+            <div class="login-column-section">
+                <div class="login-section">
+                    <form class="user-logging" method="POST" action="/login">
+                        <h1 class="input-title">Войти в аккаунт</h1>
+                        <p>
+                            <label class="visually-hidden" for="user-login-input">Email</label>
+                            <input class="input-login" id="user-login-input" type="email" name="username" placeholder="Почта" required>
+                        </p>
+                        <p>
+                            <label class="visually-hidden" for="user-login-password">Пароль</label>
+                            <input class="input-login" id="user-login-password" type="password" name="password" placeholder="Пароль" required>
+                        </p>
+                        <p class="login-password-info">
+                            <label>
+                                <input type="checkbox" class="visually-hidden" name="remember">
+                                <span class="checkbox-indicator"></span>
+                                Запомните меня
+                            </label>
+                            <a class="login-password-restore" href="#">Я забыл пароль!</a>
+                        </p>
+                        <button type="submit" class="login-button">Войти</button>
+                        <p class="back-login">
+                            <span class="bank-login-title">Войти через аккаунт банка</span>
+                        <ul class="bank-login-list">
+                            <li class="bank-login-item">
+                                <a href="/main">
+                                    <img src="${contextPath}/resources/img/bank-otritie.jpg">
+                                </a>
+                            </li>
+                            <li class="bank-login-item">
+                                <a href="/main">
+                                    <img src="${contextPath}/resources/img/bank-otritie.jpg">
+                                </a>
+                            </li>
+                            <li class="bank-login-item">
+                                <a href="/main">
+                                    <img src="${contextPath}/resources/img/bank-otritie.jpg">
+                                </a>
+                            </li>
+                            <li class="bank-login-item">
+                                <a href="/main">
+                                    <img src="${contextPath}/resources/img/bank-otritie.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                        </p>
+                    </form>
+
+                    <form class="user-logging-recover hide-elem" method="POST" action="#">
+                        <h1 class="input-title">Восстановить аккаунт</h1>
+                        <p>
+                            <label class="visually-hidden" for="user-login-input">Email</label>
+                            <input class="input-login" id="user-login-input" type="email" name="email" placeholder="Почта" required>
+                        </p>
+                        <button type="submit" class="login-button">Восстановить пароль</button>
+                    </form>
+                    <div class="extra-help-back hide-elem">
+                        <a href="#" class="login-back">Вернуться</a>
+                    </div>
+
+                    <div class="extra-help-login">
+                        <a href="/registration" class="login-register">Нет аккаунта?</a>
+                    </div>
+                </div>
+
+                <div class="sim-slider">
+                    <ul class="sim-slider-list">
+                        <li><img src="http://pvbk.spb.ru/inc/slider/imgs/no-image.gif" alt="screen"></li> <!-- это экран -->
+                        <li class="sim-slider-element">
+                            <img src="https://i.photographers.ua/thumbnails/pictures/23992/800x-meditatsii-3-4.jpg" alt="0">
+                            <span>Приветики, Текст нужно придумать сюда</span>
+                        </li>
+                        <li class="sim-slider-element">
+                            <img src="https://spb.zvetnoe.ru/upload/catalog/2019/10/KH0372.jpg" alt="1">
+                            <span>И сюда тоже нужно придумать</span>
+                        </li>
+                        <li class="sim-slider-element">
+                            <img src="https://i.photographers.ua/thumbnails/pictures/23992/800x-meditatsii-3-4.jpg" alt="2">
+                            <span>Сюда не нужно, ой нужно. Нужно</span>
+                        </li>
+                    </ul>
+                    <div class="sim-slider-arrow-left"></div>
+                    <div class="sim-slider-arrow-right"></div>
+                    <div class="sim-slider-dots"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <ul class="footer-list">
+                <li class="footer-list-item">
+                    <a href="#">Правила</a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#">Контакты</a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#">О нас</a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#">Настройки</a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#">Приватность</a>
+                </li>
+            </ul>
+            <p class="copytight">© Copyright 2020. All rights reserved. </p>
+        </div>
+    </div>
+</footer>
+<script src="${contextPath}/resources/js/main.js"></script>
+<script src="${contextPath}/resources/js/slider.js"></script>
+</body>
+</html>
