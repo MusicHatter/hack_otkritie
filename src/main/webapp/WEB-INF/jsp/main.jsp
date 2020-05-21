@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Мои подписки</title>
-    <link rel="stylesheet" href="${contextPath}/resources/css/normalize.css">
-    <link rel="stylesheet" href="${contextPath}/resources/css/style.css">
+    <link rel="stylesheet" href="${contextPath}/css/normalize.css">
+    <link rel="stylesheet" href="${contextPath}/css/style.css">
 </head>
 <body class="inner-page">
 <header class="inner-header">

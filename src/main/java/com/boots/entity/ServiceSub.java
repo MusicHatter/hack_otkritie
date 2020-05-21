@@ -8,21 +8,23 @@ import java.util.Set;
 public class ServiceSub {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "service_id")
+    private Long service_id;
     private String name;
     private String description;
     private double price;
     private String expire;
     private String category;
 
-    /*@ManyToMany(fetch = FetchType.EAGER,
+    @ManyToMany(fetch = FetchType.EAGER,
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE
             },
-            mappedBy = "services")*/
-    @OneToMany(mappedBy = "service")
-    private Set<UserAndServiceSub> userAndServiceSubs;
+            mappedBy = "services")
+    //@OneToMany(mappedBy = "service")
+    //private Set<UserAndServiceSub> userAndServiceSubs;
+    private Set<User> users;
 
     public String getName() {
         return name;
@@ -32,12 +34,12 @@ public class ServiceSub {
         this.name = name;
     }
 
-    public Long getId() {
-        return id;
+    public Long getService_id() {
+        return service_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setService_id(Long id) {
+        this.service_id = id;
     }
 
     public String getDescription() {
@@ -72,19 +74,19 @@ public class ServiceSub {
         this.expire = expire;
     }
 
-    public Set<UserAndServiceSub> getUserAndServiceSubs() {
+    /*public Set<UserAndServiceSub> getUserAndServiceSubs() {
         return userAndServiceSubs;
     }
 
     public void setUserAndServiceSubs(Set<UserAndServiceSub> userAndServiceSubs) {
         this.userAndServiceSubs = userAndServiceSubs;
-    }
+    }*/
 
-    /*public Set<User> getUsers() {
+    public Set<User> getUsers() {
         return users;
     }
 
     public void setUsers(Set<User> users) {
         this.users = users;
-    }*/
+    }
 }

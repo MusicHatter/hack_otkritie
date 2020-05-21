@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Ivi",
+    "description": "Домашний кинотеатр",
+    "price": 1000,
+    "expire": 30,
+    "category": 3,
+    "bank": 1
+  },
+  {
+    "name": "MTC",
+    "description": "Мобильные услуги",
+    "price": 650,
+    "expire": 30,
+    "category": 6,
+    "bank": 1
+  },
+  {
+    "name": "Тройка",
+    "description": "Транспортный услуги",
+    "price": 2500,
+    "expire": 30,
+    "category": 5,
+    "bank": 1
+  },
+  {
+    "name": "YandexMusic",
+    "description": "Музыкальный сервис",
+    "price": 400,
+    "expire": 30,
+    "category": 2,
+    "bank": 1
+  },
+  {
+    "name": "YouTube",
+    "description": "Домашний кинотеатр",
+    "price": 1000,
+    "expire": 30,
+    "category": 3,
+    "bank": 1
+  },
+  {
+    "name": "Okko",
+    "description": "Домашний кинотеатр",
+    "price": 1200,
+    "expire": 30,
+    "category": 3,
+    "bank": 1
+  },
+  {
+    "name": "H&M",
+    "description": "Другие сервисы",
+    "price": 1500,
+    "expire": 30,
+    "category": 9,
+    "bank": 1
+  },
+  {
+    "name": "ПионерНет",
+    "description": "Услуги для дома",
+    "price": 1200,
+    "expire": 30,
+    "category": 4,
+    "bank": 1
+  },
+  {
+    "name": "МЭС",
+    "description": "Услуги для дома",
+    "price": 760,
+    "expire": 30,
+    "category": 4,
+    "bank": 1
+  },
+  {
+    "name": "Ростелеком",
+    "description": "Мобильные услуги",
+    "price": 500,
+    "expire": 30,
+    "category": 6,
+    "bank": 1
+  },
+  {
+    "name": "ЖКХ",
+    "description": "Услуги для дома",
+    "price": 900,
+    "expire": 30,
+    "category": 4,
+    "bank": 1
+  },
+  {
+    "name": "PlayMarket",
+    "description": "Игровой сервис",
+    "price": 700,
+    "expire": 30,
+    "category": 8,
+    "bank": 1
+  },
+  {
+    "name": "Netflix",
+    "description": "Домашний кинотеатр",
+    "price": 1600,
+    "expire": 30,
+    "category": 3,
+    "bank": 1
+  },
+  {
+    "name": "UFC",
+    "description": "Спортивный сервис",
+    "price": 2000,
+    "expire": 30,
+    "category": 1,
+    "bank": 1
+  },
+  {
+    "name": "МатчТВ",
+    "description": "Спортивный сервис",
+    "price": 1100,
+    "expire": 30,
+    "category": 1,
+    "bank": 1
+  },
+  {
+    "name": "СберБанк",
+    "description": "Банковские услуги",
+    "price": 1250,
+    "expire": 30,
+    "category": 7,
+    "bank": 1
+  },
+  {
+    "name": "ОткрытиеБанк",
+    "description": "Банковские услуги",
+    "price": 1500,
+    "expire": 30,
+    "category": 7,
+    "bank": 1
+  },
+  {
+    "name": "Tinkoff",
+    "description": "Банковские услуги",
+    "price": 1500,
+    "expire": 30,
+    "category": 7,
+    "bank": 1
+  },
+  {
+    "name": "AppleMusic",
+    "description": "Музыкальный сервис",
+    "price": 1200,
+    "expire": 30,
+    "category": 2,
+    "bank": 1
+  },
+  {
+    "name": "Beeline",
+    "description": "Мобильные услуги",
+    "price": 700,
+    "expire": 30,
+    "category": 6,
+    "bank": 1
+  },
+  {
+    "name": "Мегафон",
+    "description": "Мобильные услуги",
+    "price": 600,
+    "expire": 30,
+    "category": 6,
+    "bank": 1
+  },
+  {
+    "name": "Tele2",
+    "description": "Мобильные услуги",
+    "price": 600,
+    "expire": 30,
+    "category": 6,
+    "bank": 1
+  },
+  {
+    "name": "Origin",
+    "description": "Игровой сервис",
+    "price": 1000,
+    "expire": 30,
+    "category": 8,
+    "bank": 1
+  },
+  {
+    "name": "Steam",
+    "description": "Игровой сервис",
+    "price": 1000,
+    "expire": 30,
+    "category": 8
+  },
+  {
+    "name": "AppStore",
+    "description": "Игровой сервис",
+    "price": 1400,
+    "expire": 30,
+    "category": 8,
+    "bank": 1
+  },
+  {
+    "name": "МИР",
+    "description": "Банковские услуги",
+    "price": 1000,
+    "expire": 30,
+    "category": 7,
+    "bank": 1
+  }
+]

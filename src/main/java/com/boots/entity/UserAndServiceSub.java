@@ -11,13 +11,15 @@ public class UserAndServiceSub {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    //private User user;
+    private Long user_id;
 
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn(name = "service_id")
-    private ServiceSub service;
+    //private ServiceSub service;
+    private Long service_id;
 
     private Long expire;
 
@@ -29,7 +31,7 @@ public class UserAndServiceSub {
         this.id = id;
     }
 
-    public User getUser() {
+    /*public User getUser() {
         return user;
     }
 
@@ -43,7 +45,7 @@ public class UserAndServiceSub {
 
     public void setService(ServiceSub service) {
         this.service = service;
-    }
+    }*/
 
     public Long getExpire() {
         return expire;
@@ -51,5 +53,21 @@ public class UserAndServiceSub {
 
     public void setExpire(Long expire) {
         this.expire = expire;
+    }
+
+    public Long getService_id() {
+        return service_id;
+    }
+
+    public void setService_id(Long service_id) {
+        this.service_id = service_id;
+    }
+
+    public Long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
     }
 }

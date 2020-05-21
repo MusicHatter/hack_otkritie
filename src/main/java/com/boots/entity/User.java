@@ -13,32 +13,35 @@ import java.util.Set;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "user_id")
+    private Long user_id;
     @Size(min=2, message = "Не меньше 5 знаков")
     private String username;
     @Size(min=2, message = "Не меньше 5 знаков")
     private String password;
     @Transient
     private String passwordConfirm;
+    private boolean bank;
 
-    /*@ManyToMany(fetch = FetchType.EAGER,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-            })
-    @JoinTable(name="user_service",
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    /*@JoinTable(name="user_service"
             joinColumns = @JoinColumn(name="user_id", referencedColumnName="id"),
-            inverseJoinColumns = @JoinColumn(name="service_id", referencedColumnName="id")
-    )*/
-    @OneToMany(mappedBy = "service")
-    private Set<UserAndServiceSub> userAndServiceSubs;
+            inverseJoinColumns = @JoinColumn(name="service_id", referencedColumnName="id")*/
+    //)
+    //@OneToMany(mappedBy = "service")
+    //private Set<UserAndServiceSub> userAndServiceSubs;
+    private Set<ServiceSub> services;
 
-    public Long getId() {
-        return id;
+    public User() {
+        setBank(false);
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Long id) {
+        this.user_id = id;
     }
 
     @Override
@@ -93,21 +96,29 @@ public class User implements UserDetails {
         this.passwordConfirm = passwordConfirm;
     }
 
-    public Set<UserAndServiceSub> getUserAndServiceSubs() {
+    /*public Set<UserAndServiceSub> getUserAndServiceSubs() {
         return userAndServiceSubs;
     }
 
     public void setUserAndServiceSubs(Set<UserAndServiceSub> userAndServiceSubs) {
         this.userAndServiceSubs = userAndServiceSubs;
+    }*/
+
+    public boolean isBank() {
+        return bank;
     }
 
-   /* public Set<ServiceSub> getServices() {
+    public void setBank(boolean bank) {
+        this.bank = bank;
+    }
+
+    public Set<ServiceSub> getServices() {
         return services;
     }
 
     public void setServices(Set<ServiceSub> services) {
         this.services = services;
-    }*/
+    }
 
     /*public Set<Role> getRoles() {
         return roles;

@@ -19,8 +19,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import javax.persistence.EntityManager;
@@ -43,11 +41,6 @@ public class UserService implements UserDetailsService {
     UserAndServiceSubRepository userAndServiceSubRepository;
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    /*@GetMapping(path="/all")
-    public @ResponseBody Iterable<User> getAllUsers() {
-        return userRepository.findAll();
-    }*/
 
     public void downloadCfg() throws IOException {
             try {
@@ -99,11 +92,10 @@ public class UserService implements UserDetailsService {
 
     public void saveUserAndService(ServiceSub service, User user, LocalDate expire) {
         UserAndServiceSub userAndServiceSub = new UserAndServiceSub();
-        userAndServiceSub.setService(service);
-        userAndServiceSub.setUser(user);
-        System.out.println(expire);
-        System.out.println(LocalDate.now());
-        //System.out.println(Duration.between(expire, LocalDate.now()));
+        //userAndServiceSub.setService(service);
+        //userAndServiceSub.setUser(user);
+        userAndServiceSub.setService_id(service.getService_id());
+        userAndServiceSub.setUser_id(user.getUser_id());
         userAndServiceSub.setExpire(Duration.between(expire.atStartOfDay(), LocalDate.now().atStartOfDay()).toDays());
         userAndServiceSubRepository.save(userAndServiceSub);
     }
@@ -154,7 +146,7 @@ public class UserService implements UserDetailsService {
     }
 
     public List<User> usergtList(Long idMin) {
-        return em.createQuery("SELECT u FROM User u WHERE u.id > :paramId", User.class)
+        return em.createQuery("SELECT u FROM User u WHERE u.user_id > :paramId", User.class)
                 .setParameter("paramId", idMin).getResultList();
     }
 }
