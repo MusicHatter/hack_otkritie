@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
@@ -179,5 +180,43 @@
         </div>
     </div>
 </footer>
+<section class="modal-info">
+    <h2>Информация</h2>
+    <form action="#" method="POST">
+        <div class="money-subs-column">
+            <p class="money-subs-title">Название</p>
+            <p class="money-subs-cost">Стоимость</p>
+        </div>
+        <p class="money-subs-description">Описание</p>
+        <div>
+            <p class="money-subs-about">Когда заканчивается подписка:</p>
+            <p class="money-subs-date-end">05.05.2020</p>
+        </div>
+        <div class="money-subs-column">
+            <input class="money-subs-btn-del" type="button" value="Удалить">
+            <input class="money-subs-btn-edit" type="button" value="Редактировать">
+        </div>
+    </form>
+</section>
+
+
+<section class="modal-add">
+    <h2>Редактировать подписку</h2>
+    <form:form method="POST" modelAttribute="addServiceForm" class="add-service">
+        <div class="money-subs-column">
+            <form:input class="money-subs-title-input" type="text" path="name" placeholder="Название"></form:input>
+            <form:input class="money-subs-cost-input" type="text" path="price" placeholder="Стоимость"></form:input>
+        </div>
+        <form:input class="money-subs-description-input" type="text" path="description" placeholder="Описание"></form:input>
+        <div>
+            <p class="money-subs-about">Когда заканчивается подписка:</p>
+            <form:input class="money-subs-date-end-input" type="text" path="expire" placeholder="Дата окончания"></form:input>
+        </div>
+        <div class="money-subs-column">
+            <!--<input class="money-subs-btn-del" type="submit" value="Удалить">-->
+            <input class="money-subs-btn-save" type="submit" value="Сохранить">
+        </div>
+    </form:form>
+</section>
 </body>
 </html>

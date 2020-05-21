@@ -20,11 +20,18 @@ public class User implements UserDetails {
     private String password;
     @Transient
     private String passwordConfirm;
-    /*@ManyToMany(fetch = FetchType.EAGER)
-    private Set<Role> roles;*/
 
-    public User() {
-    }
+    /*@ManyToMany(fetch = FetchType.EAGER,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            })
+    @JoinTable(name="user_service",
+            joinColumns = @JoinColumn(name="user_id", referencedColumnName="id"),
+            inverseJoinColumns = @JoinColumn(name="service_id", referencedColumnName="id")
+    )*/
+    @OneToMany(mappedBy = "service")
+    private Set<UserAndServiceSub> userAndServiceSubs;
 
     public Long getId() {
         return id;
@@ -85,6 +92,22 @@ public class User implements UserDetails {
     public void setPasswordConfirm(String passwordConfirm) {
         this.passwordConfirm = passwordConfirm;
     }
+
+    public Set<UserAndServiceSub> getUserAndServiceSubs() {
+        return userAndServiceSubs;
+    }
+
+    public void setUserAndServiceSubs(Set<UserAndServiceSub> userAndServiceSubs) {
+        this.userAndServiceSubs = userAndServiceSubs;
+    }
+
+   /* public Set<ServiceSub> getServices() {
+        return services;
+    }
+
+    public void setServices(Set<ServiceSub> services) {
+        this.services = services;
+    }*/
 
     /*public Set<Role> getRoles() {
         return roles;
