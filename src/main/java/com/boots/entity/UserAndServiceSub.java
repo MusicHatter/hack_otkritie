@@ -1,6 +1,7 @@
 package com.boots.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "user_service")
@@ -17,6 +18,8 @@ public class UserAndServiceSub {
     @ManyToOne
     @JoinColumn(name = "service_id")
     private ServiceSub service;
+
+    private Long expire;
 
     public Long getId() {
         return id;
@@ -40,5 +43,13 @@ public class UserAndServiceSub {
 
     public void setService(ServiceSub service) {
         this.service = service;
+    }
+
+    public Long getExpire() {
+        return expire;
+    }
+
+    public void setExpire(Long expire) {
+        this.expire = expire;
     }
 }

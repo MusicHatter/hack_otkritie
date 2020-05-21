@@ -43,9 +43,20 @@
                             <span class="bank-login-title">Войти через аккаунт банка</span>
                         <ul class="bank-login-list">
                             <li class="bank-login-item">
-                                <a href="/main">
+                                <button class="button-bank" onclick="goPython()">
                                     <img src="${contextPath}/resources/img/bank-otritie.jpg">
-                                </a>
+                                    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+                                    <script>
+                                        function goPython(){
+                                            $.ajax({
+                                                url: "data",
+                                                context: document.body
+                                            }).done(function() {
+                                                alert('finished python script');;
+                                            });
+                                        }
+                                    </script>
+                                </button>
                             </li>
                             <li class="bank-login-item">
                                 <a href="/main">

@@ -12,7 +12,7 @@ public class ServiceSub {
     private String name;
     private String description;
     private double price;
-    private Long expire;
+    private String expire;
     private String category;
 
     /*@ManyToMany(fetch = FetchType.EAGER,
@@ -64,11 +64,11 @@ public class ServiceSub {
         this.category = category;
     }
 
-    public Long getExpire() {
+    public String getExpire() {
         return expire;
     }
 
-    public void setExpire(Long expire) {
+    public void setExpire(String expire) {
         this.expire = expire;
     }
 

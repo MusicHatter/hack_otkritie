@@ -210,7 +210,7 @@
         <form:input class="money-subs-description-input" type="text" path="description" placeholder="Описание"></form:input>
         <div>
             <p class="money-subs-about">Когда заканчивается подписка:</p>
-            <form:input class="money-subs-date-end-input" type="text" path="expire" placeholder="Дата окончания"></form:input>
+            <form:input class="money-subs-date-end-input" type="date" path="expire" placeholder="Дата окончания"></form:input>
         </div>
         <div class="money-subs-column">
             <!--<input class="money-subs-btn-del" type="submit" value="Удалить">-->

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "Name": "Ivi",
+    "Description": "Домашний кинотеатр",
+    "Price": 1000,
+    "End-data": "18-06-20",
+    "Duration": "3",
+    "Category": 3
+  },
+  {
+    "id": 4,
+    "Name": "Yandex.music",
+    "Description": "Музыкальный сервис",
+    "Price": 520,
+    "End-data": "07-06-20",
+    "Duration": "3",
+    "Category": 2
+  },
+  {
+    "id": 14,
+    "Name": "UFC",
+    "Description": "Спортивный сервис",
+    "Price": 1250,
+    "End-data": "29-05-20",
+    "Duration": "3",
+    "Category": 1
+  },
+  {
+    "id": 24,
+    "Name": "Steam",
+    "Description": "Игровой сервис",
+    "Price": 288,
+    "End-data": "01-06-20",
+    "Duration": "3",
+    "Category": 8
+  }
+]

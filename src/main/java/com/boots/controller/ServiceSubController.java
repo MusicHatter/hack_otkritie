@@ -5,12 +5,9 @@ import com.boots.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import java.io.IOException;
 
 @Controller
 public class ServiceSubController {
@@ -19,15 +16,15 @@ public class ServiceSubController {
     private UserService userService;
 
     @GetMapping("/main")
-    public String man_2(Model model) {
+    public String man_2(Model model) throws IOException {
+        userService.downloadCfg();
         model.addAttribute("addServiceForm", new ServiceSub());
         return "main";
     }
 
     @PostMapping("/main")
     public String addUser(@ModelAttribute("addServiceForm") ServiceSub addServiceForm, Model model) {
-        ServiceSub s = new ServiceSub();
-        if (!userService.saveService(addServiceForm)) {
+        if (!userService.addServicePost(addServiceForm)) {
             model.addAttribute("nameError", "Сервис с таким именем уже существует");
         }
         return "main";
