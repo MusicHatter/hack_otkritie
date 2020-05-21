@@ -141,7 +141,7 @@ img {
 
 .main-desctiption-button {
     margin-top: 30px;
-    
+
     background-color: #61bd4f;
 
     padding: 15px 25px;
@@ -237,6 +237,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: 20px;
 }
 
 .footer-list {
@@ -289,12 +291,15 @@ img {
 }
 
 .header-logo img {
-    width: 180px;
+    width: 160px;
     height: 50px;
+
+    margin-left: 50px;
 }
 
 .login-column-section {
     width: 80%;
+    height: 420px;
 
     margin-bottom: 30px;
 
@@ -392,7 +397,15 @@ img {
     width: 100%;
     height: auto;
 
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+  }
+
+  .sim-slider-element span {
+      margin-bottom: 30px;
+
+      display: block;
+
+      text-align: center;
   }
   
   /* Navigation item styles */
@@ -408,14 +421,14 @@ img {
   
   div.sim-slider-arrow-left {
     left: 10px;
-    top: 45%;
+    top: 40%;
     display: block;
     background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
   }
   
   div.sim-slider-arrow-right {
     right: 10px;
-    top: 45%;
+    top: 40%;
     display: block;
     background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
   }
@@ -566,6 +579,7 @@ img {
     background-color: #61bd4f;
 
     padding: 8px 25px;
+    margin-bottom: 10px;
     
     border-radius: 5px;
 
@@ -587,7 +601,6 @@ img {
     display: inline-block;
 
     margin: 0;
-    margin-top: 30px;
 
     color: #5e6c84;
 
@@ -603,410 +616,120 @@ img {
     text-decoration: none;
 }
 
-/****************************
-
-        Pupil List
-
-****************************/
-
-.pupil-column {
-    display: flex;
-}
-
-.pupil-table {
+.back-login {
     display: flex;
     flex-direction: column;
 
-    width: 40%;
-}
-
-.pupil-add {
-    align-self: flex-end;
-
-    margin-right: 20px;
-    margin-bottom: 20px;
-
-    cursor: pointer;
-}
-
-.pupil-list {
-    margin: 0;
-    padding: 20px 15px;
-
-    list-style: none;
-
-    border: 3px solid #70a9e6;
-    border-radius: 10px;
-
-}
-
-.pupil-name {
-    margin: 0;
-    margin-bottom: 20px;
-
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-
-    cursor: pointer;
-
-    position: relative;
-}
-
-.pupil-name::after {
-    content: ">";
-
-    width: 10px;
-    height: 10px;
-
-    color: #70a9e6;
-
-    position: absolute;
-
-    right: 15px;
-}
-
-.pupil-redact {
-    margin-left: 30px;
-    margin-right: 15px;
-
-    width: 40%;
-
-    border: 3px solid #70a9e6;
-    border-radius: 10px;
-}
-
-.pupil-photo {
-    width: 25%;
-    height: 25%;
-}
-
-.pupil-photo img {
-    background-color: #646262;
-
-    object-fit: cover;
-
-    border-radius: 100px;
-    width: 100px;
-    height: 100px;
-}
-
-.pupil-redact-title {
-    display: flex;
-    justify-content: space-between;
-
-    padding: 20px 10px;
-
-    color: #ffffff;
-
-    background-color: #70a9e6;
-}
-
-.pipil-title-setting {
-    width: 50%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.pupil-item-change {
-    font-size: 12px;
-    line-height: 16px;
-
-    margin: 0;
-    margin-bottom: 15px;
-
-    cursor: pointer;
-}
-
-.pupil-title-name {
-    margin: 0;
-
-    font-size: 24px;
-    line-height: 30px;
-    color: #ffffff;
-
-    text-align: right;
-}
-
-.pupil-redact-description {
-    padding: 15px;
-}
-
-.pupil-redact-description-list {
-    list-style: none;
-
-    margin: 0;
-    padding: 0;
-}
-
-.pupil-description-item {
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.pupil-description-item-title {
-    font-size: 12px;
-
-    margin: 0;
-    margin-bottom: 5px;
-
-    color: #646262;
-}
-
-.pupil-description-item-info {
-    margin: 0;
-
-    display: block;
-
-}
-
-.pupil-description-item-info-link {
-    color: #646262;
-    font-size: 14px;
-
-    float: right;
-
-    cursor: pointer;
-}
-
-.pupil-description-item-input {
-    display: block;
-}
-
-.lesson-column {
-    display: flex;
-    justify-content: space-around;
-}
-
-.lesson-title {
-    color: #646262;
-}
-
-.lesson-column-left {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.list-lesson-miss-item {
-    font-size: 18px;
-
-    margin-bottom: 15px;
-}
-
-.lesson-miss-button {
-    padding: 10px;
-    border-radius: 10px;
-
-    border: none;
-    background-color: steelblue;
-    color: #ffffff;
-}
-
-.lesson-miss-button:hover,
-.lesson-miss-button:active,
-.lesson-miss-button:focus {
-    background-color: rgb(26, 26, 143);
-}
-
-.lesson-span {
-    display: block;
-    font-size: 18px;
-
-    margin-bottom: 10px;
-}
-
-.list-lesson-check-button-true {
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 10px;
-
-    background-color: darkgreen;
-    color: #ffffff;
-
-    border: none;
-}
-
-.list-lesson-check-button-true:active,
-.list-lesson-check-button-true:focus,
-.list-lesson-check-button-true:hover {
-    background-color: rgb(1, 161, 1);
-}
-
-.list-lesson-check-button-false {
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 10px;
-
-    background-color: brown;
-    color: #ffffff;
-
-    margin-bottom: 25px;
-
-    border: none;
-}
-
-.list-lesson-check-button-false:active,
-.list-lesson-check-button-false:focus,
-.list-lesson-check-button-false:hover {
-    background-color: rgb(192, 5, 5);
-}
-
-.pers-info-photo {
-    width: 250px;
-    height: auto;
-
-    float: left;
-    margin-right: 50px;
-}
-
-.pers-info-main {
-    margin-top: 50px;
-    width: 75%;
-}
-
-.pers-info-stats {
-    margin-top: 50px;
-}
-
-.pers-info-name {
-    margin: 0;
-    margin-bottom: 10px;
-}
-
-.pers-lesson-info {
-    margin: 0;
-    margin-bottom: 15px;
-
-    font-size: 18px;
-    color: #8E8E93;
-}
-
-.pers-height {
-    margin: 0;
-    margin-bottom: 15px;
-
-    font-size: 18px;
-    color: #8E8E93;
-}
-
-.pers-list-peace {
+.bank-login-list {
     margin: 0;
     padding: 0;
 
     list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.bank-login-item a {
+    text-decoration: none;
+}
+
+.bank-login-item a img {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 10px;
+}
+
+/****************************
+
+        Inner page
+
+****************************/
+
+.inner-header {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3E3E3E;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    padding: 10px 0;
+}
+
+.nav-logo {
+    width: 160px;
+    height: 50px;
+
+    align-self: center;
+}
+
+.page-list {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+
+    list-style: none;
+
     display: flex;
 }
 
-.pers-list-peace p {
+.page-link {
+    margin-right: 25px;
+}
+
+.profile-section {
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.search-input {
+    border: 1px solid rgba(65, 65, 65, 0.5);
+
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-search {
+    margin-bottom: 30px;
+}
+
+.subs-list-render {
     margin: 0;
-    margin-right: 10px;
-}
+    padding: 0;
 
-.pers-list-item {
-    padding: 10px 5px 10px 30px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    list-style: none;
 
-    background-color: #D1D1D6;
-    border-radius: 5px;
-
-    font-weight: bold;
-
-    position: relative;
-}
-
-.pers-list-item::before {
-    content: "";
-
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-
-    left: 7px;
-}
-
-.pers-list-item-active::before {
-    background-image: url('../img/decord.svg');
-    background-position: 0 0;
-    background-size: 17px 17px;
-    background-repeat: no-repeat;
-}
-
-.pers-list-item-deactive::before {
-    background-image: url('../img/Kort.svg');
-    background-position: 0 0;
-    background-size: 17px 17px;
-    background-repeat: no-repeat;
-}
-
-.pers-info-column {
     display: flex;
     justify-content: space-between;
 }
 
-.pers-info-stats-list {
-    margin: 0;
-    padding: 0;
+.img-subs {
+    border: 3px solid #210000;
 
-    list-style: none;
+    object-fit: cover;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+.subs-list-item {
     display: flex;
     flex-direction: column;
-}
-
-.pers-stats-number {
-    display: block;
-    padding: 20px 40px;
-
-    background-color: #34C759;
-    border-radius: 5px;
-
-    text-align: center;
-
-    font-size: 24px;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.pers-stats-desk {
-    display: block;
-
-    color: #636366;
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.pers-lesson-info-place {
-    margin-top: 20px;
-    margin-bottom: 5px;
-
-    font-size: 18px;
-    color: #8E8E93;
-}
-
-.phar-pers-hous {
-    margin: 0;
-}
-
-.pers-span-bold {
-    font-weight: bold;
-}
-
-.pers-info-column {
-    padding-bottom: 70px;
-    border-bottom: 1px solid #C7C7CC;
-}
-
-.lesson-title-list {
-    font-size: 28px;
-    font-weight: bold;
-    color: #8E8E93;
-}
-
-.lesson-list-teacher li {
-    margin-bottom: 40px;
+    align-items: center;
 }
 
 /****************************
